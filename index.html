@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="TPSeNCE: Towards Artifact-Free Realistic Rain Generation for Deraining and Object Detection in Rain">
+        content="Semantic-Guided Zero-Shot Learning for Low-Light Image/Video Enhancement">
   <meta name="keywords" content="InstanceWarp, Domain Adaptation, Bad Weather">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TPSeNCE: Towards Artifact-Free Realistic Rain Generation for Deraining and Object Detection in Rain</title>
+  <title>Semantic-Guided Zero-Shot Learning for Low-Light Image/Video Enhancement</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -47,7 +47,7 @@
       </a>
 
       <span class="navbar-item">
-        TPSeNCE: Towards Artifact-Free Realistic Rain Generation for Deraining and Object Detection in Rain
+        Semantic-Guided Zero-Shot Learning for Low-Light Image/Video Enhancement
       </span>
 
     </div>
@@ -74,22 +74,19 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TPSeNCE: Towards Artifact-Free Realistic Rain Generation for Deraining and Object Detection in Rain</h1>
+          <h1 class="title is-1 publication-title">Semantic-Guided Zero-Shot Learning for Low-Light Image/Video Enhancement</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://shenzheng2000.github.io/">Shen Zheng</a><sup>1</sup>,</span>
+              <a href="https://shenzheng2000.github.io/">Shen Zheng</a>,</span>
             <span class="author-block">
-              <a href="https://louey233.github.io/">Changjie Lu</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.cs.cmu.edu/~srinivas/">Srinivasa Narasimhan</a><sup>1</sup></span>
-            </div>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup> CMU,</span>
-              <span class="author-block"><sup>2</sup> UIUC</span>
-            </div>
-            <div class="is-size-5 publication-authors" style="margin-top: 1em;">
-              <strong>Accepted to WACV 2024</strong>
-            </div>            
+              <a href="https://csmt.wku.edu.cn/en/node/1844">Gaurav Gupta</a></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Wenzhou-Kean University</span>
+          </div>
+          <div class="is-size-5 publication-authors" style="margin-top: 1em;">
+            <strong>Accepted to WACV 2022</strong>
+          </div>      
 
         <div class="column has-text-centered">
           <div class="publication-links">
@@ -139,139 +136,29 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Backgrounds: Impact of Rain on Object Detection</h2>
-        <div class="content has-text-justified">
-          <div class="image-gallery columns is-mobile">
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Header/2a1e1100-9dd1e103.jpg"
-                     class="publication-image"
-                     alt="InstanceWarp for Domain Adaptation."/>
-                <figcaption>Raindrops</figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Header/7e50f0e4-0ae1eb2e.jpg"
-                     class="publication-image"
-                     alt="Sample Image 2"/>
-                <figcaption>Rain Mist</figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Header/8a5ee740-e1fbb2e7.jpg"
-                     class="publication-image"
-                     alt="Sample Image 3"/>
-                <figcaption>Reflections</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Challenges: Current I2I Methods Fail to Generate High-Quality Rainy Images for Finetuning</h2>
-        <div class="content has-text-justified">
-          <div class="image-gallery columns is-mobile">
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/BadCase/b1ceb32e-a106591d.jpg"
-                     class="publication-image"
-                     alt="InstanceWarp for Domain Adaptation."/>
-                <figcaption></figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/BadCase/b1cebfb7-284f5117.jpg"
-                     class="publication-image"
-                     alt="Sample Image 2"/>
-                <figcaption></figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/BadCase/b1d10d08-c35503b8.jpg"
-                     class="publication-image"
-                     alt="Sample Image 3"/>
-                <figcaption></figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Contributions -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Our Contributions</h2>
-        <div class="content has-text-justified">
-          <ul>
-            <li>Triangular Probability Similarity (TPS) for minimizing artifacts and distortions.</li>
-            <li>Semantic Noise Contrastive Estimation (SeNCE) for optimizing the amounts of generated rain.</li>
-            <li>Realistic rain generation benefits deraining and object detection in real rainy conditions.</li>
-          </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Model Workflow</h2>
-        <div class="content has-text-justified">
-          <p>
-            TPS aligns the generated rainy image with the clear and rainy image in the discriminator manifold to suppress artifacts and distortions, 
-            while SeNCE adjusts the pushing force of the negative patches based on their feature similarities with the anchor patch and refines that force 
-            with the semantic similarity between clear and rainy. 
-          </p>
-          <img src="./static/images/Overview/Titlepage_10_31-1.png"
-               class="publication-image"
-               alt="InstanceWarp for Domain Adaptation."/>
-        </div>
-      </div>
-    </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
         <h2 class="title is-3">Model Architecture</h2>
         <div class="content has-text-justified">
           <p>
-            TPSeNCE uses a generator to translate clear images to rainy ones, 
-            a discriminator with TPS and GAN losses, and an encoder that embeds patches from both clear and generated images.
-             MLPs process these patches contrastively to output SeNCE loss, guided by semantic segmentation maps.
+            We propose a Semantic-Guided Zero-Shot (SGZ) network for low-light image enhancement. 
+            It consists of:
           </p>
-          <img src="./static/images/Overview/Workflow_10_31-1.png"
+          <ul>
+            <li>An <strong>Enhancement Factor Extraction (EFE)</strong> network for estimating pixel-wise light deficiency.</li>
+            <li>A <strong>Recurrent Image Enhancement (RIE)</strong> network to progressively enhance the low-light image.</li>
+            <li>An <strong>Unsupervised Semantic Segmentation (USS)</strong> network for preserving the semantic information.</li>
+          </ul>
+          <p>
+            During training, both RIE and USS have frozen parameters and they output the loss to update EFE. During testing, EFE and RIE are used sequentially to enhance a low-light image.
+          </p>
+          <img src="./static/images/Model/WACV-1.png"
                class="publication-image"
                alt="InstanceWarp for Domain Adaptation."/>
         </div>
       </div>
     </div>
+  </div>
 </section>
+
 
 
 
@@ -280,20 +167,54 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Semantic Noise Contrastive Estimation (SeNCE)</h2>
+        <h2 class="title is-3">Enhancement Factor Extraction (EFE)</h2>
         <div class="content has-text-justified">
           <p>
-            SeNCE outperforms PatchNCE and MoNCE in optimizing the amount of rain to produce realistic rainy images. 
-            The length of the arrow here represents the magnitude of the NCE losses.
+            EFE provides an efficient estimate of light deficiency. Darker regions below indicate lower enhancement factor values, which will be enhanced more.
           </p>
-          <img src="./static/images/SeNCE/fig_explained-1.png"
-               class="publication-image"
-               alt="InstanceWarp for Domain Adaptation."/>
+          <!-- First Row -->
+          <div class="image-gallery columns is-mobile">
+            <div class="column is-half">
+              <figure>
+                <img src="./static/images/EnhanceFactor/BDD_s1.jpg"
+                     class="publication-image"
+                     alt="Dark"/>
+                <figcaption>Low-Light Image 1</figcaption>
+              </figure>
+            </div>
+            <div class="column is-half">
+              <figure>
+                <img src="./static/images/EnhanceFactor/BDD_s1-1.png"
+                     class="publication-image"
+                     alt="Retinex-Net"/>
+                <figcaption>Enhancement Factor 1</figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="image-gallery columns is-mobile" style="margin-top: 20px;">
+            <div class="column is-half">
+              <figure>
+                <img src="./static/images/EnhanceFactor/BDD_s2.jpg"
+                     class="publication-image"
+                     alt="KinD"/>
+                <figcaption>Low-Light Image 2</figcaption>
+              </figure>
+            </div>
+            <div class="column is-half">
+              <figure>
+                <img src="./static/images/EnhanceFactor/BDD_s2-1.png"
+                     class="publication-image"
+                     alt="EnlightenGAN"/>
+                <figcaption>Enhancement Factor 2</figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
-
 
 
 
@@ -303,11 +224,11 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 custom-red">Visual Results (Clear2Rainy Video)</h2>
+        <h2 class="title is-3 custom-red">Visual Results: Aerial Video</h2>
         <div class="content has-text-justified">
           <div class="video-container">
             <video width="100%" height="auto" controls>
-              <source src="./static/videos/TPSeNCE_Rain_Generation.mp4" type="video/mp4">
+              <source src="./static/videos/SGZ_LLIE.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -322,150 +243,59 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 custom-red">Visual Results (Clear2Rainy)</h2>
+        <h2 class="title is-3 custom-red">Visual Results: Aerial Image Enhancement</h2>
         <div class="content has-text-justified">
+          <!-- First Row -->
           <div class="image-gallery columns is-mobile">
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Rainmake_Compare_BDD/Clear/b1c66a42-6f7d68ca.jpg"
+                <img src="./static/images/Video/F1.png"
                      class="publication-image"
-                     alt="InstanceWarp for Domain Adaptation."/>
-                <figcaption>Clear</figcaption>
+                     alt="Dark"/>
+                <figcaption>Dark</figcaption>
               </figure>
             </div>
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Rainmake_Compare_BDD/CUT/b1c66a42-6f7d68ca.jpg"
+                <img src="./static/images/Video/retinex_net.png"
                      class="publication-image"
-                     alt="Sample Image 2"/>
-                <figcaption>CUT</figcaption>
+                     alt="PIE"/>
+                <figcaption>Retinex-Net</figcaption>
               </figure>
             </div>
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Rainmake_Compare_BDD/CUT_TPS_SeNCE/b1c66a42-6f7d68ca.jpg"
+                <img src="./static/images/Video/kind.png"
                      class="publication-image"
-                     alt="Sample Image 3"/>
-                <figcaption>TPSeNCE (Ours)</figcaption>
+                     alt="LIME"/>
+                <figcaption>KinD</figcaption>
               </figure>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 custom-red">Visual Results (Rainy2Clear)</h2>
-        <div class="content has-text-justified">
-          <div class="image-gallery columns is-mobile">
+          <!-- Second Row -->
+          <div class="image-gallery columns is-mobile" style="margin-top: 20px;">
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Derain/Rainy/76dcb9c0-b9268707.jpg"
+                <img src="./static/images/Video/enlighten_gan.png"
                      class="publication-image"
-                     alt="InstanceWarp for Domain Adaptation."/>
-                <figcaption>Rainy</figcaption>
+                     alt="Retinex-Net"/>
+                <figcaption>EnlightenGAN</figcaption>
               </figure>
             </div>
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Derain/CUT/76dcb9c0-b9268707.jpg"
+                <img src="./static/images/Video/zero_dce.png"
                      class="publication-image"
-                     alt="Sample Image 2"/>
-                <figcaption>CUT</figcaption>
+                     alt="Zero-DCE"/>
+                <figcaption>Zero-DCE</figcaption>
               </figure>
             </div>
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Derain/CUT_TPS_SeNCE/76dcb9c0-b9268707.jpg"
+                <img src="./static/images/Video/F1Crop.png"
                      class="publication-image"
-                     alt="Sample Image 3"/>
-                <figcaption>TPSeNCE (Ours)</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 custom-red">Visual Results (Clear2Snowy)</h2>
-        <div class="content has-text-justified">
-          <div class="image-gallery columns is-mobile">
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Snowy/Clear/boreas-2021-03-30-14-23.mkv_frame_5265.jpg"
-                     class="publication-image"
-                     alt="InstanceWarp for Domain Adaptation."/>
-                <figcaption>Clear</figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Snowy/CUT/boreas-2021-03-30-14-23.mkv_frame_5265.jpg"
-                     class="publication-image"
-                     alt="Sample Image 2"/>
-                <figcaption>CUT</figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Snowy/Ours/boreas-2021-03-30-14-23.mkv_frame_5265.jpg"
-                     class="publication-image"
-                     alt="Sample Image 3"/>
-                <figcaption>TPSeNCE (Ours)</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 custom-red">Visual Results (Day2Night)</h2>
-        <div class="content has-text-justified">
-          <div class="image-gallery columns is-mobile">
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Night/Clear/b1d0091f-f2c2d2ae.jpg"
-                     class="publication-image"
-                     alt="InstanceWarp for Domain Adaptation."/>
-                <figcaption>Day</figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Night/CUT/b1d0091f-f2c2d2ae.jpg"
-                     class="publication-image"
-                     alt="Sample Image 2"/>
-                <figcaption>CUT</figcaption>
-              </figure>
-            </div>
-            <div class="column is-one-third">
-              <figure>
-                <img src="./static/images/Experiments/Night/Ours/b1d0091f-f2c2d2ae.jpg"
-                     class="publication-image"
-                     alt="Sample Image 3"/>
-                <figcaption>TPSeNCE (Ours)</figcaption>
+                     alt="SGZ (Ours)"/>
+                <figcaption>SGZ (Ours)</figcaption>
               </figure>
             </div>
           </div>
@@ -479,35 +309,274 @@
 
 
 
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 custom-red">Visual Results (Object Detection in Rain)</h2>
+        <h2 class="title is-3 custom-red">Visual Results: Natural Image Enhancement</h2>
         <div class="content has-text-justified">
+          <!-- First Row -->
           <div class="image-gallery columns is-mobile">
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Detect/Rainy/2e6ab366-0b8b11e0.jpg"
+                <img src="./static/images/Visual1/Dark2.jpg"
                      class="publication-image"
-                     alt="InstanceWarp for Domain Adaptation."/>
-                <figcaption>Pretrained</figcaption>
+                     alt="Dark"/>
+                <figcaption>Dark</figcaption>
               </figure>
             </div>
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Detect/CUT/2e6ab366-0b8b11e0.jpg"
+                <img src="./static/images/Visual1/PIE2.jpg"
                      class="publication-image"
-                     alt="Sample Image 2"/>
-                <figcaption>Finetuned on CUT</figcaption>
+                     alt="PIE"/>
+                <figcaption>PIE</figcaption>
               </figure>
             </div>
             <div class="column is-one-third">
               <figure>
-                <img src="./static/images/Experiments/Detect/CUT_TPS_SeNCE/2e6ab366-0b8b11e0.jpg"
+                <img src="./static/images/Visual1/LIME2.jpg"
                      class="publication-image"
-                     alt="Sample Image 3"/>
-                <figcaption>Finetuned on TPSeNCE (Ours)</figcaption>
+                     alt="LIME"/>
+                <figcaption>LIME</figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="image-gallery columns is-mobile" style="margin-top: 20px;">
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual1/Retinex2.jpg"
+                     class="publication-image"
+                     alt="Retinex-Net"/>
+                <figcaption>Retinex-Net</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual1/ZeroDCE2.jpg"
+                     class="publication-image"
+                     alt="Zero-DCE"/>
+                <figcaption>Zero-DCE</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual1/Ours2.jpg"
+                     class="publication-image"
+                     alt="SGZ (Ours)"/>
+                <figcaption>SGZ (Ours)</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 custom-red">Visual Results: Facial Image Enhancement</h2>
+        <div class="content has-text-justified">
+          <!-- First Row -->
+          <div class="image-gallery columns is-mobile">
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual2/Dark7.jpg"
+                     class="publication-image"
+                     alt="Dark"/>
+                <figcaption>Dark</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual2/PIE7.jpg"
+                     class="publication-image"
+                     alt="PIE"/>
+                <figcaption>PIE</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual2/LIME7.jpg"
+                     class="publication-image"
+                     alt="LIME"/>
+                <figcaption>LIME</figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="image-gallery columns is-mobile" style="margin-top: 20px;">
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual2/Retinex7.jpg"
+                     class="publication-image"
+                     alt="Retinex-Net"/>
+                <figcaption>Retinex-Net</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual2/ZeroDCE7.jpg"
+                     class="publication-image"
+                     alt="Zero-DCE"/>
+                <figcaption>Zero-DCE</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/Visual2/Ours7.jpg"
+                     class="publication-image"
+                     alt="SGZ (Ours)"/>
+                <figcaption>SGZ (Ours)</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 custom-red">Visual Results: Low-Light Object Detection</h2>
+        <div class="content has-text-justified">
+          <!-- First Row -->
+          <div class="image-gallery columns is-mobile">
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/ObjDet/Dark.png"
+                     class="publication-image"
+                     alt="Dark"/>
+                <figcaption>Dark</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/ObjDet/PIE.png"
+                     class="publication-image"
+                     alt="PIE"/>
+                <figcaption>PIE</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/ObjDet/enlighten_gan.png"
+                     class="publication-image"
+                     alt="LIME"/>
+                <figcaption>EnlightenGAN</figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="image-gallery columns is-mobile" style="margin-top: 20px;">
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/ObjDet/Retinex.png"
+                     class="publication-image"
+                     alt="Retinex-Net"/>
+                <figcaption>Retinex-Net</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/ObjDet/ZeroDCE.png"
+                     class="publication-image"
+                     alt="Zero-DCE"/>
+                <figcaption>Zero-DCE</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/ObjDet/Ours.png"
+                     class="publication-image"
+                     alt="SGZ (Ours)"/>
+                <figcaption>SGZ (Ours)</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 custom-red">Visual Results: Low-Light Semantic Segmentation</h2>
+        <div class="content has-text-justified">
+          <!-- First Row -->
+          <div class="image-gallery columns is-mobile">
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/SemSeg/Dark34.png"
+                     class="publication-image"
+                     alt="Dark"/>
+                <figcaption>Dark</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/SemSeg/PIE34.png"
+                     class="publication-image"
+                     alt="PIE"/>
+                <figcaption>PIE</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/SemSeg/Retinex34.png"
+                     class="publication-image"
+                     alt="Retinex-Net"/>
+                <figcaption>Retinex-Net</figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="image-gallery columns is-mobile" style="margin-top: 20px;">
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/SemSeg/ZeroDCE34.png"
+                     class="publication-image"
+                     alt="Zero-DCE"/>
+                <figcaption>Zero-DCE</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/SemSeg/Our34.png"
+                     class="publication-image"
+                     alt="SGZ (Ours)"/>
+                <figcaption>SGZ (Ours)</figcaption>
+              </figure>
+            </div>
+            <div class="column is-one-third">
+              <figure>
+                <img src="./static/images/SemSeg/Clean34.png"
+                     class="publication-image"
+                     alt="Ground Truth"/>
+                <figcaption>Ground Truth</figcaption>
               </figure>
             </div>
           </div>
